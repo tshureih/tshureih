@@ -1,0 +1,14 @@
+name: Greetings - تحيّة و مُقَدِّمة
+
+on: [pull_request, issues]
+
+jobs:
+  greeting: تحيّاتنا وأهلاََ وسهلاََ - نَشكُر إهتِمامك بالإعلان ومُشاركتكَ
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: 'شكراََ لإضافتك.  سنحرِص أن يَعمل عليها في أسرع وقت ممكن'
+        pr-message: 'أهلاََ وسهلاََ - شكراََ للإهتمام بالإتفاقيّة وقرائتها والعَمَل عَليها'
+        pr-message: 'للتواصل معنا: admin@eltanweer.com'
